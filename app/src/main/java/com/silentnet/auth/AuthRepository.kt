@@ -22,11 +22,16 @@ class AuthRepository(
         val adminUsername = "adi31@admin"
         if (userDao.findByUsername(adminUsername) == null) {
             val salt = AuthUtils.generateSalt()
+            // The default admin account is created with a random secure password on first run.
+            // In a production environment, this should be set during a secure onboarding flow.
+            val initialPassword = java.util.UUID.randomUUID().toString().substring(0, 12)
+            android.util.Log.i("SilentNetSecurity", "Initial Admin Password generated: $initialPassword")
+            
             val admin = UserEntity(
                 username = adminUsername,
                 fullName = "Aditya Admin",
                 nickname = "College Admin",
-                passwordHash = AuthUtils.hashPassword("123456", salt),
+                passwordHash = AuthUtils.hashPassword(initialPassword, salt),
                 passwordSalt = salt,
                 role = "ADMIN"
             )
