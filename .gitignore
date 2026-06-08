@@ -1,0 +1,28 @@
+# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Artifacts
+*.apk
+*.aar
+*.jar
+
+# Logs
+*.txt
+*.log
+all_logs.txt
+
+# UI Dumps / Temporary XMLs in root
+/*.xml
+
+# Python
+__pycache__/
+*.pyc
+app/src/main/python/env/

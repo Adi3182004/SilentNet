@@ -1,0 +1,9 @@
+<resources>
+    <color name="silentnet_purple">#7C4DFF</color>
+    <color name="silentnet_blue">#4E7CFF</color>
+    <color name="silentnet_cyan">#25D6FF</color>
+    <color name="silentnet_bg">#0B1020</color>
+    <color name="silentnet_bg_soft">#121A33</color>
+    <color name="silentnet_text">#F4F7FF</color>
+    <color name="silentnet_text_muted">#AAB4D6</color>
+</resources>
